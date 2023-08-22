@@ -40,7 +40,7 @@ const deleteMessage = async (messageId) => {
 
   return (
     <div>
-      <div className={`chat ${messageClass}`}>
+      <div className={`chat `}>
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
             <img src={message.avatar} />
