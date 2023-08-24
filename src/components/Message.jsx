@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { auth } from "../firebase/firebaseconfig";
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../firebase/firebaseconfig";
-
+import "./message.css"
 const Message = ({ message }) => {
 const {User} = useContext(SignInContext)
 
@@ -36,18 +36,18 @@ const deleteMessage = async (messageId) => {
 
   
   const timestamp = `${hours}:${minutes}`;
-  const messageClass = message.uid === auth.currentUser.email ? "chat-end" : "chat-start";
+  const messageClass = message.name === auth.currentUser.displayName ? "self-end" : "self-start";
 
   return (
-    <div>
-      <div className={`chat `}>
+    <div className={`${messageClass} w-2/5 flex my-2`}>
+      <div className={`chat`}>
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
             <img src={message.avatar} />
           </div>
         </div>
         <div className="chat-header">{message.name}</div>
-        <div className="chat-bubble chat-bubble-accent">{message.text}</div>
+        <div className="chat-bubble chat-bubble-accent bg-blue-500 w-40 h-10 rounded-lg text-center">{message.text}</div>
         <div>
           {timestamp}
           {message.uid === auth.currentUser.email && (

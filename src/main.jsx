@@ -12,6 +12,8 @@ import Home from './pages/Home.jsx'
 import { SignInProvider } from './context/signInContext'
 
 import Chatroom from './pages/Chatroom.jsx'
+// import { ThemeProvider } from "./context/ThemeContext"
+
 
 
 
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <Home/>
   },
- 
+  
 
   {
     path:"/Chatroom",
@@ -35,6 +37,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <SignInProvider>
       <RouterProvider router={router}/>
     </SignInProvider>
+{/* 
+    <ThemeProvider>
+        <App/>
+    </ThemeProvider> */}
+
 
   </React.StrictMode>,
 )

@@ -4,17 +4,34 @@ import { useContext } from 'react';
 import { SignInContext } from './context/signInContext';
 import {Link} from 'react-router-dom'
 import Chatroom from './pages/Chatroom';
-
+// import { ThemeProvider } from "./context/ThemeContext"
 
 
 
 function App() {
 
-  const { handleClick, currentUser, userName } = useContext(SignInContext)
-  const handleLogout = ()=> {
+  // const { theme, handleThemeChange } = useContext(ThemeContext)
+
+  // const backgroundColor = {
+  //     backgroundColor: theme === 'light' ? 'white' : 'black',
+  //     color: theme === 'light' ? 'black' : 'white' 
+  // }
+
+  // return (
+  //     <main style={backgroundColor}>
+  //         <button onClick={handleThemeChange}>Change Theme</button>
+
+  //         {/**Other content */}
+
+  //     </main>
+  // )
+
+  const {handleClick,currentUser,userName}=useContext(SignInContext)
+  const handleLogout =()=>{
     localStorage.clear()
     window.location.reload()
-}
+  }
+
 
   return (
     
