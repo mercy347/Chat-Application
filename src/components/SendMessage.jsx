@@ -30,8 +30,8 @@ const SendMessage = () => {
   return (
    < div className='bg-pink-500 fixed bottom-0 w-full py-10 shadow-lg'>
         <form onSubmit={handleSend} className='containerWrap flex items-center justify-center px-2'>
-            <input value={value} onChange={e => setValue(e.target.value)} className='input w-100 focus:outline-none rounded-r-none' type="text"/>
-            <button type='submit' className='w-auto text-black rounded-r-lg px-5 text-sm'>Send</button>
+            <input value={value} onChange={e => setValue(e.target.value)} className='input w-100 border-red-200  rounded-lg ' type="text"/>
+            <button type='submit' className='w-auto text-black rounded-r-lg px-5 text-sm hover:text-blue-500'>Send</button>
         </form>
     </div>
   )

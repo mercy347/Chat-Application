@@ -27,6 +27,7 @@ return (
   <>
   <div className=" navbar bg-base-100  bg-gradient-to-r from-blue-600 to-pink-600 flex flex-row sticky top-0 z-10 space-x-9">
   <a className="btn btn-ghost normal-case text-3xl ">Chatify</a>
+
   <ul className="menu menu-horizontal bg-base-200 rounded-box mt-6 content-center space-x-9">
   <li>
     <Link to='/'>
@@ -36,7 +37,7 @@ return (
   </li>
 </ul>
 </div>
-  <div className="pb-44 pt-2 w-full flex flex-col p-4 ">
+  <div className="pb-44 pt-2 w-full flex flex-col p-4  ">
     {messages.map((message) => {
       return (
         <Message

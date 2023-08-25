@@ -39,7 +39,7 @@ const deleteMessage = async (messageId) => {
   const messageClass = message.name === auth.currentUser.displayName ? "self-end" : "self-start";
 
   return (
-    <div className={`${messageClass} w-2/5 flex my-2`}>
+    <div className={`${messageClass} w-1/5 flex my-2 bg-green-200`}>
       <div className={`chat`}>
         <div className="chat-image avatar">
           <div className="w-10 rounded-full">
@@ -47,7 +47,7 @@ const deleteMessage = async (messageId) => {
           </div>
         </div>
         <div className="chat-header">{message.name}</div>
-        <div className="chat-bubble chat-bubble-accent bg-blue-500 w-40 h-10 rounded-lg text-center">{message.text}</div>
+        <div className="chat-bubble chat-bubble-accent bg-pink-500 w-60 h-10 rounded-lg text-center">{message.text}</div>
         <div>
           {timestamp}
           {message.uid === auth.currentUser.email && (
